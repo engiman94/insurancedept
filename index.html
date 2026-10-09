@@ -1,0 +1,2663 @@
+
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>بەشی دڵنیایی</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f1f5f9;
+    color:#0f172a;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:35px 20px;
+    box-sizing:border-box;
+    position:relative;
+    overflow:hidden;
+    background:#075985;
+}
+
+.welcome-box{
+    width:100%;
+    max-width:900px;
+}
+
+.logo{
+    width:140px;
+    height:140px;
+    object-fit:contain;
+    margin-bottom:25px;
+}
+
+.welcome-box h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.welcome-box p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+/* =========================
+   LANGUAGE BUTTONS
+========================= */
+
+.languages{
+    margin-bottom:30px;
+}
+
+.languages button{
+    border:none;
+    padding:11px 24px;
+    margin:5px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    background:white;
+    color:#075985;
+    transition:.3s;
+}
+
+.languages button:hover{
+    background:#bae6fd;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   MAIN BUTTONS
+========================= */
+
+.main-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.welcome-button{
+    min-width:220px;
+    padding:15px 25px;
+
+    background:white;
+    color:#075985;
+
+    border:none;
+    border-radius:12px;
+
+    font-size:17px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.welcome-button:hover{
+    background:#bae6fd;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   PAGES
+========================= */
+
+.page{
+    display:none;
+    min-height:100vh;
+    padding:50px 20px;
+    background:#f1f5f9;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+}
+
+.page-title{
+    text-align:center;
+    color:#075985;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-card{
+    background:white;
+    border-radius:16px;
+    padding:30px;
+    margin-bottom:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    border-right:5px solid #075985;
+}
+
+.about-card h2{
+    color:#075985;
+    margin-bottom:15px;
+    font-size:27px;
+}
+
+.about-card p{
+    font-size:19px;
+    line-height:2;
+    color:#334155;
+    margin-bottom:12px;
+}
+
+/* =========================
+   ESTABLISHMENT
+========================= */
+
+.year{
+    background:linear-gradient(
+        135deg,
+        #075985,
+        #0c4a6e
+    );
+
+    color:white;
+    border-radius:16px;
+
+    padding:30px;
+    margin-top:30px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.year h2{
+    margin-bottom:20px;
+    font-size:27px;
+}
+
+.year-text{
+    font-size:18px;
+    line-height:2;
+}
+
+.year-text strong{
+    color:#bae6fd;
+}
+
+/* =========================
+   STAFF
+========================= */
+
+.staff-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.staff-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+
+    border-top:5px solid #075985;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.staff-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    background:#e0f2fe;
+
+    font-size:38px;
+}
+
+.staff-card h2{
+    color:#075985;
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+.staff-info{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:12px;
+    text-align:right;
+}
+
+.staff-info p{
+    font-size:17px;
+    line-height:2;
+    color:#334155;
+}
+
+.staff-info strong{
+    color:#075985;
+}
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.semester{
+    margin-bottom:35px;
+}
+
+.semester-title{
+    background:#075985;
+    color:white;
+
+    padding:17px 22px;
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    font-size:25px;
+}
+
+.subject-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:15px;
+}
+
+.subject-card{
+    background:white;
+
+    padding:20px;
+
+    border-radius:13px;
+
+    border-right:4px solid #0ea5e9;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+
+    transition:.3s;
+}
+
+.subject-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.subject-number{
+    display:inline-flex;
+
+    width:32px;
+    height:32px;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#e0f2fe;
+    color:#075985;
+
+    border-radius:50%;
+
+    font-weight:bold;
+
+    margin-left:8px;
+}
+
+.subject-name{
+    color:#334155;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* =========================
+   BACK
+========================= */
+
+.back-area{
+    text-align:center;
+    margin-top:35px;
+}
+
+.back-button{
+    padding:13px 35px;
+
+    background:#075985;
+    color:white;
+
+    border:none;
+    border-radius:9px;
+
+    cursor:pointer;
+    font-size:17px;
+
+    transition:.3s;
+}
+
+.back-button:hover{
+    background:#0c4a6e;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   SEMESTER BUTTONS
+========================= */
+
+.semester-button{
+    width:100%;
+    border:none;
+    background:#075985;
+    color:white;
+    padding:18px 22px;
+    border-radius:12px;
+    margin-bottom:15px;
+    font-size:25px;
+    font-weight:bold;
+    cursor:pointer;
+    text-align:right;
+    transition:.3s;
+}
+
+.semester-button:hover{
+    background:#0c4a6e;
+    transform:translateY(-2px);
+}
+
+.semester-content{
+    display:none;
+    margin-bottom:20px;
+}
+
+.semester-content.open{
+    display:grid;
+}
+
+/* =========================
+   WEEKLY SCHEDULE
+========================= */
+
+.schedule-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.schedule-button{
+    min-width:240px;
+    border:none;
+    background:#075985;
+    color:white;
+    padding:17px 25px;
+    border-radius:12px;
+    font-size:21px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.schedule-button:hover{
+    background:#0c4a6e;
+    transform:translateY(-2px);
+}
+
+.schedule-content{
+    display:none;
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.schedule-content.open{
+    display:block;
+}
+
+.schedule-image{
+    width:100%;
+    max-width:1000px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:10px;
+}
+
+/* =========================
+   QR CODE
+========================= */
+
+.qr-box{
+    background:white;
+    max-width:520px;
+    margin:0 auto;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.qr-box h2{
+    color:#075985;
+    margin-bottom:15px;
+}
+
+.qr-box p{
+    color:#475569;
+    font-size:18px;
+    line-height:2;
+    margin-bottom:25px;
+}
+
+#qrcode{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:240px;
+    margin:20px auto;
+}
+
+#qrcode img{
+    width:220px;
+    height:220px;
+    display:block;
+    border:10px solid white;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .welcome-box h1{
+        font-size:42px;
+    }
+
+    .welcome-box p{
+        font-size:19px;
+    }
+
+    .logo{
+        width:120px;
+        height:120px;
+    }
+
+    .page-title{
+        font-size:32px;
+    }
+
+    .about-card{
+        padding:22px;
+    }
+
+    .about-card h2{
+        font-size:23px;
+    }
+
+    .about-card p{
+        font-size:17px;
+    }
+
+    .welcome-button{
+        width:100%;
+        max-width:320px;
+    }
+
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.contact-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    border-top:5px solid #075985;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.contact-card h2{
+    color:#075985;
+    margin-bottom:15px;
+}
+
+.contact-card p{
+    font-size:19px;
+    line-height:2;
+    color:#334155;
+    margin-bottom:15px;
+}
+
+.contact-time{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:12px;
+    font-size:18px;
+    line-height:2;
+    color:#334155;
+}
+
+.contact-maker{
+    margin-top:30px;
+    text-align:center;
+    font-size:18px;
+    color:#075985;
+    font-weight:bold;
+}
+
+/* ===== FINAL EPU INSURANCE HOME DESIGN ===== */
+
+.welcome-box{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:920px;
+    padding:38px 32px 42px;
+    box-sizing:border-box;
+    border-radius:30px;
+    background:rgba(255,255,255,.90);
+    border:1px solid rgba(255,255,255,.98);
+    box-shadow:0 25px 70px rgba(0,0,0,.28);
+    backdrop-filter:blur(5px);
+    text-align:center;
+}
+
+.logo{
+    width:145px;
+    height:145px;
+    object-fit:contain;
+    border-radius:50%;
+    background:#fff;
+    padding:8px;
+    box-sizing:border-box;
+    box-shadow:0 10px 28px rgba(0,0,0,.20);
+    border:4px solid #d6a72c;
+}
+
+.welcome-box h1{
+    color:#075985;
+    font-size:38px;
+    margin:22px 0 8px;
+    font-weight:800;
+}
+
+.welcome-box p{
+    color:#334155;
+    font-size:20px;
+    margin:0 0 22px;
+}
+
+.languages{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0 24px;
+}
+
+.languages button{
+    min-width:105px;
+    padding:10px 18px;
+    border:1px solid #cbd5e1;
+    border-radius:12px;
+    background:#f8fafc;
+    color:#075985;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.languages button:hover{
+    transform:translateY(-2px);
+    background:#075985;
+    color:#fff;
+    border-color:#075985;
+}
+
+.main-buttons{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:15px;
+    max-width:700px;
+    margin:0 auto;
+}
+
+.welcome-button{
+    width:100%;
+    min-height:58px;
+    padding:14px 18px;
+    border:1px solid #e2e8f0;
+    border-right:5px solid #d6a72c;
+    border-radius:15px;
+    background:#fff;
+    color:#075985;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 7px 20px rgba(15,23,42,.10);
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+}
+
+.welcome-button:hover{
+    transform:translateY(-4px);
+    background:#075985;
+    color:#fff;
+    box-shadow:0 14px 28px rgba(7,89,133,.24);
+}
+
+@media(max-width:650px){
+
+    .welcome-box{
+        padding:28px 18px 32px;
+        border-radius:22px;
+    }
+
+    .logo{
+        width:120px;
+        height:120px;
+    }
+
+    .welcome-box h1{
+        font-size:30px;
+    }
+
+    .welcome-box p{
+        font-size:17px;
+    }
+
+    .main-buttons{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* Graduates page */
+
+.graduates-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:25px;
+    max-width:850px;
+    margin:0 auto;
+}
+
+.graduate-info-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    border-top:5px solid #075985;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.graduate-info-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.graduate-info-card h2{
+    color:#075985;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.graduate-info-card p{
+    color:#334155;
+    font-size:20px;
+    font-weight:bold;
+    line-height:2;
+}
+
+.graduate-note{
+    max-width:850px;
+    margin:25px auto 0;
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    text-align:center;
+    color:#475569;
+    font-size:19px;
+    line-height:2;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border-right:5px solid #d6a72c;
+}
+
+@media(max-width:650px){
+
+    .graduates-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* News & Activities */
+
+.news-empty-card{
+    max-width:850px;
+    margin:0 auto;
+    background:white;
+    padding:45px 35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    border-top:5px solid #d6a72c;
+}
+
+.news-icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.news-empty-card h2{
+    color:#075985;
+    font-size:27px;
+    margin-bottom:18px;
+}
+
+.news-empty-card p{
+    color:#475569;
+    font-size:19px;
+    line-height:2.1;
+}
+
+#newsPage{
+    display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<section class="welcome" id="welcomePage">
+
+<div class="welcome-box">
+
+<img
+src="epulogo(1).jpg"
+alt="Insurance Department Logo"
+class="logo"
+>
+
+<div class="languages">
+
+<button onclick="changeLanguage('ku')">
+کوردی
+</button>
+
+<button onclick="changeLanguage('en')">
+English
+</button>
+
+<button onclick="changeLanguage('ar')">
+العربية
+</button>
+
+</div>
+
+<h1 id="title">
+بەخێربێن
+</h1>
+
+<p id="description">
+بۆ بەشی دڵنیایی
+</p>
+
+<div class="main-buttons">
+
+<button
+class="welcome-button"
+id="aboutButton"
+onclick="showPage('aboutPage')">
+
+📖 دەربارەی بەش
+
+</button>
+
+<button
+class="welcome-button"
+id="staffButton"
+onclick="showPage('staffPage')">
+
+👨‍🏫 ستافی ئەکادیمی
+
+</button>
+
+<button
+class="welcome-button"
+id="subjectsButton"
+onclick="showPage('subjectsPage')">
+
+📚 وانەکانی بەش
+
+</button>
+
+<button
+class="welcome-button"
+id="scheduleButton"
+onclick="showPage('schedulePage')">
+
+📅 خشتەی هەفتانەی بەش
+
+</button>
+
+<button
+class="welcome-button"
+id="graduatesButton"
+onclick="showPage('graduatesPage')">
+
+🎓 دەرچووان
+
+</button>
+
+<button
+class="welcome-button"
+id="qrButton"
+onclick="showPage('qrPage')">
+
+📱 QR Code
+
+</button>
+
+<button
+class="welcome-button"
+id="contactButton"
+onclick="showPage('contactPage')">
+
+📞 پەیوەندی
+
+</button>
+
+<button
+class="welcome-button"
+id="newsButton"
+onclick="showPage('newsPage')">
+
+📰 هەواڵ و چالاکییەکان
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     ABOUT PAGE
+===================================================== -->
+
+<section class="page" id="aboutPage">
+
+<div class="container">
+
+<h1 class="page-title" id="aboutTitle">
+دەربارەی بەشی دڵنیایی
+</h1>
+
+<div class="about-card">
+
+<h2 id="introTitle">
+ناساندنی بەشی دڵنیایی
+</h2>
+
+<p id="introText">
+بەشی دڵنیایی یەکێکە لە بەشە گرنگەکانی پەیمانگە و
+ئامانجی سەرەکی لە کردنەوەی ئەم بەشە پێگەیاندن و
+ئامادەکردنی کادری شارەزا و لێهاتووە، بە هۆی پێویستی
+بەم پسپۆڕییە بۆ بازاڕی کار، بە مەبەستی زیاتر بەرەو
+پێشبردنی کوردستان و بەرزکردنەوەی ئاستی زانستی و
+کارگێڕی لە دام و دەزگا حکومی و نا حکومییەکان و
+کەرتی تایبەت.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h2 id="messageTitle">
+پەیامی بەش
+</h2>
+
+<p id="messageText">
+تواناکردنی دەرچووی زانکۆ بۆ بەدەستهێنانی زانیاری و
+چەمکی پێویست لە بواری بیمەدا، هەروەها ڕاهێنانی
+کادیرانی توانای گونجاندنی بنەما تێوری و شێوازە
+چەندایەتییەکان لە دروستکردنی مۆدێلی نوێی داپۆشینی
+بیمە کە لەگەڵ بڕگەکانی شەریعەتی ئیسلامیدا بگونجێت.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h2 id="visionTitle">
+دیدی بەش
+</h2>
+
+<p id="visionText">
+بۆ ئەوەی بەشێکی پێشەنگ بێت لە شایستەکردنی پیشەییەکانی
+بیمە، دانپێنراو بێت لەسەر ئاستی ناوخۆیی و نێودەوڵەتی،
+لەسەر بنەمای ئابووری زانیاری.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h2 id="goalsTitle">
+ئامانجی بەش
+</h2>
+
+<p id="goalsText">
+ئامادەکردن و شایستەکردنی خوێندکاران بۆ خوێندنی دبلۆمی
+تەکنیکی لە بواری بیمەدا، بە پەرەپێدانی توانا فیکری،
+زانستی و توێژینەوەکانیان.
+</p>
+
+<p id="goalText2">
+پەرەپێدانی بنەما و چەمکەکانی بیمە و بەڕێوەبردنی
+مەترسی کە لەگەڵ پێداویستییەکانی کۆمەڵگا دەگونجێت.
+</p>
+
+<p id="goalText3">
+ئامادەکردنی دەرچووانی شایستە لە بواری بیمەدا کە توانای
+بەڕێوەبردنی دەزگاکانی بیمەیان هەبێت.
+</p>
+
+</div>
+
+<div class="year">
+
+<h2 id="yearTitle">
+ساڵی دامەزراندنی بەش
+</h2>
+
+<div class="year-text" id="yearText">
+
+بە پێی فەرمانی زانکۆیی / سەرۆکایەتی زانکۆی
+پۆڵیەکنیکی هەولێر، ژمارە (١٠٥٩١)، لە ڕێکەوتی
+٣٠/١٠/٢٠٢٤، کردنەوەی بەشی دڵنیایی لە پەیمانگەی
+تەکنیکی کارگێڕی هەولێر بۆ ساڵی خوێندنی
+(٢٠٢٥–٢٠٢٦) پەسەند کراوە.
+
+<br><br>
+
+قوتابیانی ئەم بەشە بڕوانامەی دبلۆمی تەکنیکی
+لە بواری دڵنیایی وەردەگرن.
+
+<br><br>
+
+ناونیشانی کار بۆ دەرچووانی ئەم بەشە نوێیە،
+بە پێی یاسا و ڕێنماییەکانی دارایی دیاری دەکرێت.
+
+<br><br>
+
+دوای تێپەڕبوونی یەک ساڵ لە خزمەتکردن،
+ناونیشانی کاری دەرچووی بەشەکە دەبێتە:
+
+<br><br>
+
+<strong>
+«یاریدەدەری چاودێری کارگێڕی»
+</strong>
+
+</div>
+
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="aboutBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     STAFF PAGE
+===================================================== -->
+
+<section class="page" id="staffPage">
+
+<div class="container">
+
+<h1 class="page-title" id="staffTitle">
+👨‍🏫 ستافی ئەکادیمی
+</h1>
+
+<div class="staff-grid">
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستا شەمال محمد اسماعیل
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+سەرۆکی بەش
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+ماستەر
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستا خانزاد عەزیز سولەیمان
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+بڕیاریدەرەی بەش
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستا ایمان سردار قادر
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+فەرمانبەر
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستا هاورێ خەلیل
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+مامۆستا
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستا ماردین
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+فەرمانبەر
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستاهێلین
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+فەرمانبەر
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستاشنۆ کمال
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+مامۆستا
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستادیدار جلال
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+مامۆستا
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👨‍🏫
+</div>
+
+<h2>
+مامۆستاهانی عبدالستار
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+فەرمانبەر
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👩‍🏫
+</div>
+
+<h2>
+مامۆستاشەونم زوار
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+فەرمانبەر
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+دبلۆم
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+دواتر زیاد دەکرێت
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👩‍🏫
+</div>
+
+<h2>
+مامۆستا سوسن احمد
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+فەرمانبەر
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+بەکالۆریۆس
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+ژمێریاری
+</p>
+
+</div>
+
+</div>
+
+<div class="staff-card">
+
+<div class="staff-icon">
+👩‍🏫
+</div>
+
+<h2>
+مامۆستادلڤین ڕەقیب
+</h2>
+
+<div class="staff-info">
+
+<p>
+<strong>پۆست:</strong>
+مامۆستا
+</p>
+
+<p>
+<strong>بڕوانامە:</strong>
+ماستەر
+</p>
+
+<p>
+<strong>پسپۆڕی:</strong>
+ئابووری
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="staffBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     WEEKLY SCHEDULE PAGE
+===================================================== -->
+
+<section class="page" id="schedulePage">
+
+<div class="container">
+
+<h1 class="page-title" id="scheduleTitle">
+📅 خشتەی هەفتانەی بەشی دڵنیایی
+</h1>
+
+<div class="schedule-buttons">
+
+<button
+class="schedule-button"
+id="morningScheduleButton"
+onclick="toggleSchedule('morningSchedule')">
+
+☀️ خشتەی بەیانیان
+
+</button>
+
+<button
+class="schedule-button"
+id="eveningScheduleButton"
+onclick="toggleSchedule('eveningSchedule')">
+
+🌙 خشتەی ئێواران
+
+</button>
+
+</div>
+
+<div class="schedule-content" id="morningSchedule">
+
+<img
+src="schedule-morning.jpg"
+alt="خشتەی هەفتانەی بەشی دڵنیایی - بەیانیان"
+class="schedule-image"
+>
+
+</div>
+
+<div class="schedule-content" id="eveningSchedule">
+
+<img
+src="schedule-evening.jpg"
+alt="خشتەی هەفتانەی بەشی دڵنیایی - ئێواران"
+class="schedule-image"
+>
+
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="scheduleBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     GRADUATES PAGE
+===================================================== -->
+
+<section class="page" id="graduatesPage">
+
+<div class="container">
+
+<h1 class="page-title" id="graduatesTitle">
+🎓 دەرچووان
+</h1>
+
+<div class="graduates-grid">
+
+<div class="graduate-info-card">
+
+<div class="graduate-info-icon">
+📅
+</div>
+
+<h2 id="graduationYearTitle">
+ساڵی دەرچوون
+</h2>
+
+<p id="graduationYearText">
+هێشتا نییە
+</p>
+
+</div>
+
+<div class="graduate-info-card">
+
+<div class="graduate-info-icon">
+👨‍🎓
+</div>
+
+<h2 id="graduateCountTitle">
+ژمارەی دەرچووان
+</h2>
+
+<p id="graduateCountText">
+٠
+</p>
+
+</div>
+
+</div>
+
+<div
+class="graduate-note"
+id="graduatesNote">
+
+لە ئێستادا هیچ دەرچوویەکمان نییە، چونکە بەشی دڵنیایی بەشێکی نوێیە.
+لە کاتی دەرچوونی یەکەمین خوێندکاران، ساڵی دەرچوون و ژمارەی دەرچووان لێرە زیاد دەکرێت.
+
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="graduatesBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     QR CODE PAGE
+===================================================== -->
+
+<section class="page" id="qrPage">
+
+<div class="container">
+
+<h1
+class="page-title"
+id="qrTitle">
+
+📱 QR Code
+
+</h1>
+
+<div class="qr-box">
+
+<h2 id="qrHeading">
+QR Code ـی بەشی دڵنیایی
+</h2>
+
+<p id="qrText">
+ئەم QR Code ـە scan بکە بۆ کردنەوەی وێبسایتەکە.
+</p>
+
+<div id="qrcode"></div>
+
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="qrBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     NEWS & ACTIVITIES PAGE
+===================================================== -->
+
+<section class="page" id="newsPage">
+
+<div class="container">
+
+<h1 class="page-title" id="newsTitle">
+📰 هەواڵ و چالاکییەکانی بەشی دڵنیایی
+</h1>
+
+<div class="news-empty-card">
+
+<div class="news-icon">
+📰
+</div>
+
+<h2 id="newsEmptyTitle">
+هەواڵ و چالاکییەکان
+</h2>
+
+<p id="newsEmptyText">
+لە ئێستادا هیچ هەواڵ یان چالاکییەکی تۆمارکراومان نییە.
+هەرکات چالاکی، سیمینار، وۆرکشۆپ یان هەواڵێکی نوێ هەبێت،
+لێرە بڵاو دەکرێتەوە.
+</p>
+
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="newsBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     CONTACT PAGE
+===================================================== -->
+
+<section class="page" id="contactPage">
+
+<div class="container">
+
+<h1
+class="page-title"
+id="contactTitle">
+
+📞 پەیوەندی
+
+</h1>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📍
+</div>
+
+<h2 id="locationTitle">
+هەولێر
+</h2>
+
+<p id="locationText">
+پەیمانگەی تەکنیکی کارگێڕی بەرامبەر کۆلێژی ئەندازیاری
+</p>
+
+<div
+class="contact-time"
+id="workingTime">
+
+☀️ بەیانی: ٨:٣٠ تا ١:٣٠<br>
+🌙 ئێوارە: ٣ تا ٧
+
+</div>
+
+</div>
+
+</div>
+
+<div
+class="contact-maker"
+id="contactMaker">
+
+Created by Eng. Iman S Qadir.
+
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="contactBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     SUBJECTS PAGE
+===================================================== -->
+
+<section class="page" id="subjectsPage">
+
+<div class="container">
+
+<h1
+class="page-title"
+id="subjectsTitle">
+
+📚 وانەکانی بەشی دڵنیایی
+
+</h1>
+
+<div class="semester">
+
+<button
+class="semester-button"
+id="semester1Title"
+onclick="toggleSemester('semester1')">
+
+سمستەری یەکەم
+
+</button>
+
+<div
+class="subject-grid semester-content"
+id="semester1">
+
+<div class="subject-card">
+<span class="subject-number">1</span>
+<span class="subject-name" id="s1">
+کوردۆلۆجی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">2</span>
+<span class="subject-name" id="s2">
+توانستەکانی زمانی ئینگلیزی 1
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">3</span>
+<span class="subject-name" id="s3">
+بنەماکانی کۆمپیوتەر
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">4</span>
+<span class="subject-name" id="s4">
+بنەماکانی کارگێڕی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">5</span>
+<span class="subject-name" id="s5">
+کارگێڕی دڵنیایی
+</span>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+
+<button
+class="semester-button"
+id="semester2Title"
+onclick="toggleSemester('semester2')">
+
+سمستەری دووەم
+
+</button>
+
+<div
+class="subject-grid semester-content"
+id="semester2">
+
+<div class="subject-card">
+<span class="subject-number">1</span>
+<span class="subject-name" id="s6">
+توانستەکانی زمانی ئینگلیزی 2
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">2</span>
+<span class="subject-name" id="s7">
+تێکستی دڵنیایی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">3</span>
+<span class="subject-name" id="s8">
+بنەماکانی ژمێریاری
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">4</span>
+<span class="subject-name" id="s9">
+بنەماکانی ئامار
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">5</span>
+<span class="subject-name" id="s10">
+بنەماکانی بازاڕکردن
+</span>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+
+<button
+class="semester-button"
+id="semester3Title"
+onclick="toggleSemester('semester3')">
+
+سمستەری سێیەم
+
+</button>
+
+<div
+class="subject-grid semester-content"
+id="semester3">
+
+<div class="subject-card">
+<span class="subject-number">1</span>
+<span class="subject-name" id="s11">
+کارگێڕی دڵنیایی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">2</span>
+<span class="subject-name" id="s12">
+یاسای دڵنیایی بۆ کارەکان
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">3</span>
+<span class="subject-name" id="s13">
+بازاڕکردنی دڵنیایی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">4</span>
+<span class="subject-name" id="s14">
+ژمێریاری کۆمپانیاکانی دڵنیایی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">5</span>
+<span class="subject-name" id="s15">
+دڵنیایی بەرپرسیارێتی
+</span>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+
+<button
+class="semester-button"
+id="semester4Title"
+onclick="toggleSemester('semester4')">
+
+سمستەری چوارەم
+
+</button>
+
+<div
+class="subject-grid semester-content"
+id="semester4">
+
+<div class="subject-card">
+<span class="subject-number">1</span>
+<span class="subject-name" id="s16">
+پرۆگرامی Excel
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">2</span>
+<span class="subject-name" id="s17">
+دڵنیایی کۆمەڵایەتی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">3</span>
+<span class="subject-name" id="s18">
+دڵنیایی سەر ژیان
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">4</span>
+<span class="subject-name" id="s19">
+دڵنیایی خاوەندارێتی کەسی
+</span>
+</div>
+
+<div class="subject-card">
+<span class="subject-number">5</span>
+<span class="subject-name" id="s20">
+کارگێڕی کۆمپانیاکانی دڵنیایی
+</span>
+</div>
+
+</div>
+</div>
+
+<div class="back-area">
+
+<button
+class="back-button"
+id="subjectsBackButton"
+onclick="showHome()">
+
+← گەڕانەوە بۆ سەرەکی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const translations = {
+
+ku:{
+
+title:"بەخێربێن",
+
+description:"بەخێربێن بۆ بەشی دڵنیایی",
+
+aboutButton:"📖 دەربارەی بەش",
+
+staffButton:"👨‍🏫 ستافی ئەکادیمی",
+
+subjectsButton:"📚 وانەکانی بەش",
+
+contactButton:"📞 پەیوەندی",
+
+qrButton:"📱 QR Code",
+
+qrTitle:"📱 QR Code",
+
+qrHeading:"QR Code ـی بەشی دڵنیایی",
+
+qrText:"ئەم QR Code ـە scan بکە بۆ کردنەوەی وێبسایتەکە.",
+
+qrBackButton:"← گەڕانەوە بۆ سەرەکی",
+
+contactTitle:"📞 پەیوەندی",
+
+locationTitle:"هەولێر",
+
+locationText:"پەیمانگەی تەکنیکی کارگێڕی بەرامبەر کۆلێژی ئەندازیاری",
+
+workingTime:"☀️ بەیانی: ٨:٣٠ تا ١:٣٠<br>🌙 ئێوارە: ٣ تا ٧",
+
+contactMaker:"Created by Eng. Iman S Qadir.",
+
+scheduleButton:"📅 خشتەی هەفتانەی بەش",
+
+graduatesButton:"🎓 دەرچووان",
+
+newsButton:"📰 هەواڵ و چالاکییەکان",
+
+newsTitle:"📰 هەواڵ و چالاکییەکانی بەشی دڵنیایی",
+
+newsEmptyTitle:"هەواڵ و چالاکییەکان",
+
+newsEmptyText:"لە ئێستادا هیچ هەواڵ یان چالاکییەکی تۆمارکراومان نییە. هەرکات چالاکی، سیمینار، وۆرکشۆپ یان هەواڵێکی نوێ هەبێت، لێرە بڵاو دەکرێتەوە.",
+
+newsBackButton:"← گەڕانەوە بۆ سەرەکی",
+
+graduatesTitle:"🎓 دەرچووان",
+
+graduationYearTitle:"ساڵی دەرچوون",
+
+graduationYearText:"هێشتا نییە",
+
+graduateCountTitle:"ژمارەی دەرچووان",
+
+graduateCountText:"٠",
+
+graduatesNote:"لە ئێستادا هیچ دەرچوویەکمان نییە، چونکە بەشی دڵنیایی بەشێکی نوێیە. لە کاتی دەرچوونی یەکەمین خوێندکاران، ساڵی دەرچوون و ژمارەی دەرچووان لێرە زیاد دەکرێت.",
+
+graduatesBackButton:"← گەڕانەوە بۆ سەرەکی",
+
+scheduleTitle:"📅 خشتەی هەفتانەی بەشی دڵنیایی",
+
+morningScheduleButton:"☀️ خشتەی بەیانیان",
+
+eveningScheduleButton:"🌙 خشتەی ئێواران",
+
+aboutTitle:"دەربارەی بەشی دڵنیایی",
+
+introTitle:"ناساندنی بەشی دڵنیایی",
+
+introText:"بەشی دڵنیایی یەکێکە لە بەشە گرنگەکانی پەیمانگە و ئامانجی سەرەکی لە کردنەوەی ئەم بەشە پێگەیاندن و ئامادەکردنی کادری شارەزا و لێهاتووە، بە هۆی پێویستی بەم پسپۆڕییە بۆ بازاڕی کار، بە مەبەستی زیاتر بەرەو پێشبردنی کوردستان و بەرزکردنەوەی ئاستی زانستی و کارگێڕی.",
+
+messageTitle:"پەیامی بەش",
+
+messageText:"تواناکردنی دەرچووان بۆ بەدەستهێنانی زانیاری و چەمکی پێویست لە بواری بیمەدا و ڕاهێنانی کادرێکی شارەزا کە بتوانێت بنەما تێوری و شێوازە چەندایەتییەکان لە بواری دڵنیایی بەکاربهێنێت.",
+
+visionTitle:"دیدی بەش",
+
+visionText:"بۆ ئەوەی بەشێکی پێشەنگ بێت لە شایستەکردنی پیشەییەکانی بیمە و دانپێنراو بێت لەسەر ئاستی ناوخۆیی و نێودەوڵەتی.",
+
+goalsTitle:"ئامانجی بەش",
+
+goalsText:"ئامادەکردن و شایستەکردنی خوێندکاران بۆ خوێندنی دبلۆمی تەکنیکی لە بواری دڵنیایی.",
+
+goalText2:"پەرەپێدانی بنەما و چەمکەکانی دڵنیایی و بەڕێوەبردنی مەترسی.",
+
+goalText3:"ئامادەکردنی دەرچووانی شایستە کە توانای کارکردن لە دامەزراوە و کۆمپانیاکانی دڵنیایییان هەبێت.",
+
+yearTitle:"ساڵی دامەزراندنی بەش",
+
+yearText:"بە پێی فەرمانی زانکۆیی / سەرۆکایەتی زانکۆی پۆڵیەکنیکی هەولێر، ژمارە (١٠٥٩١)، لە ڕێکەوتی ٣٠/١٠/٢٠٢٤، کردنەوەی بەشی دڵنیایی لە پەیمانگەی تەکنیکی کارگێڕی هەولێر بۆ ساڵی خوێندنی (٢٠٢٥–٢٠٢٦) پەسەند کراوە. قوتابیانی ئەم بەشە بڕوانامەی دبلۆمی تەکنیکی لە بواری دڵنیایی وەردەگرن. ناونیشانی کار بۆ دەرچووانی ئەم بەشە بە پێی یاسا و ڕێنماییە داراییەکان دیاری دەکرێت و دوای یەک ساڵی خزمەتکردن دەبێتە «یاریدەدەری چاودێری کارگێڕی».",
+
+semester1Title:"سمستەری یەکەم",
+
+semester2Title:"سمستەری دووەم",
+
+semester3Title:"سمستەری سێیەم",
+
+semester4Title:"سمستەری چوارەم",
+
+subjectsTitle:"وانەکانی بەشی دڵنیایی",
+
+s1:"کوردۆلۆجی",
+s2:"توانستەکانی زمانی ئینگلیزی 1",
+s3:"بنەماکانی کۆمپیوتەر",
+s4:"بنەماکانی کارگێڕی",
+s5:"کارگێڕی دڵنیایی",
+
+s6:"توانستەکانی زمانی ئینگلیزی 2",
+s7:"تێکستی دڵنیایی",
+s8:"بنەماکانی ژمێریاری",
+s9:"بنەماکانی ئامار",
+s10:"بنەماکانی بازاڕکردن",
+
+s11:"کارگێڕی دڵنیایی",
+s12:"یاسای دڵنیایی بۆ کارەکان",
+s13:"بازاڕکردنی دڵنیایی",
+s14:"ژمێریاری کۆمپانیاکانی دڵنیایی",
+s15:"دڵنیایی بەرپرسیارێتی",
+
+s16:"پرۆگرامی Excel",
+s17:"دڵنیایی کۆمەڵایەتی",
+s18:"دڵنیایی سەر ژیان",
+s19:"دڵنیایی خاوەندارێتی کەسی",
+s20:"کارگێڕی کۆمپانیاکانی دڵنیایی",
+
+back:"← گەڕانەوە بۆ سەرەکی"
+
+},
+
+en:{
+
+title:"Welcome",
+
+description:"Welcome to the Insurance Department",
+
+aboutButton:"📖 About the Department",
+
+staffButton:"👨‍🏫 Academic Staff",
+
+subjectsButton:"📚 Department Courses",
+
+contactButton:"📞 Contact",
+
+qrButton:"📱 QR Code",
+
+qrTitle:"📱 QR Code",
+
+qrHeading:"Insurance Department QR Code",
+
+qrText:"Scan this QR Code to open the website.",
+
+qrBackButton:"← Back to Home",
+
+contactTitle:"📞 Contact",
+
+locationTitle:"Erbil",
+
+locationText:"Erbil Technical Administrative Institute opposite the College of Engineering",
+
+workingTime:"☀️ Morning: 8:30 to 1:30<br>🌙 Evening: 3:00 to 7:00",
+
+contactMaker:"Created by Eng. Iman S Qadir.",
+
+scheduleButton:"📅 Weekly Department Schedule",
+
+graduatesButton:"🎓 Graduates",
+
+newsButton:"📰 News & Activities",
+
+newsTitle:"📰 Insurance Department News & Activities",
+
+newsEmptyTitle:"News & Activities",
+
+newsEmptyText:"There are currently no registered news items or activities. New activities, seminars, workshops, and announcements will be published here.",
+
+newsBackButton:"← Back to Home",
+
+graduatesTitle:"🎓 Graduates",
+
+graduationYearTitle:"Graduation Year",
+
+graduationYearText:"Not yet",
+
+graduateCountTitle:"Number of Graduates",
+
+graduateCountText:"0",
+
+graduatesNote:"There are currently no graduates because the Insurance Department is new. The graduation year and number of graduates will be added here when the first students graduate.",
+
+graduatesBackButton:"← Back to Home",
+
+scheduleTitle:"📅 Weekly Schedule of the Insurance Department",
+
+morningScheduleButton:"☀️ Morning Schedule",
+
+eveningScheduleButton:"🌙 Evening Schedule",
+
+aboutTitle:"About the Insurance Department",
+
+introTitle:"Introduction to the Insurance Department",
+
+introText:"The Insurance Department is one of the important departments of the institute. It aims to prepare qualified and skilled professionals in insurance and respond to the needs of the labor market.",
+
+messageTitle:"Department Message",
+
+messageText:"The department aims to provide graduates with the necessary knowledge and concepts in insurance and develop qualified professionals capable of applying theoretical and quantitative methods in the field.",
+
+visionTitle:"Department Vision",
+
+visionText:"To become a leading department in developing professional competencies in insurance and to gain recognition at local and international levels.",
+
+goalsTitle:"Department Goals",
+
+goalsText:"To prepare and qualify students to obtain a Technical Diploma in Insurance.",
+
+goalText2:"To develop the principles and concepts of insurance and risk management.",
+
+goalText3:"To prepare qualified graduates capable of working in insurance institutions and companies.",
+
+yearTitle:"Department Establishment",
+
+yearText:"According to University Order No. (10591) issued by the Presidency of Erbil Polytechnic University on 30/10/2024, the establishment of the Insurance Department at the Erbil Technical Administrative Institute was approved for the academic year (2025–2026). Students receive a Technical Diploma in Insurance. Job titles are determined according to applicable laws and financial regulations, and after one year of service the graduate becomes an Assistant Administrative Supervisor.",
+
+semester1Title:"First Semester",
+
+semester2Title:"Second Semester",
+
+semester3Title:"Third Semester",
+
+semester4Title:"Fourth Semester",
+
+subjectsTitle:"Insurance Department Courses",
+
+s1:"Kurdology",
+s2:"English Language Skills 1",
+s3:"Computer Fundamentals",
+s4:"Principles of Management",
+s5:"Insurance Management",
+
+s6:"English Language Skills 2",
+s7:"Insurance Text",
+s8:"Principles of Accounting",
+s9:"Principles of Statistics",
+s10:"Principles of Marketing",
+
+s11:"Insurance Management",
+s12:"Insurance Law for Operations",
+s13:"Insurance Marketing",
+s14:"Accounting for Insurance Companies",
+s15:"Liability Insurance",
+
+s16:"Microsoft Excel",
+s17:"Social Insurance",
+s18:"Life Insurance",
+s19:"Personal Property Insurance",
+s20:"Management of Insurance Companies",
+
+back:"← Back to Home"
+
+},
+
+ar:{
+
+title:"مرحباً بكم",
+
+description:"مرحباً بكم في قسم التأمين",
+
+aboutButton:"📖 عن القسم",
+
+staffButton:"👨‍🏫 الكادر الأكاديمي",
+
+subjectsButton:"📚 مواد القسم",
+
+contactButton:"📞 اتصل بنا",
+
+qrButton:"📱 رمز QR",
+
+qrTitle:"📱 رمز QR",
+
+qrHeading:"رمز QR لقسم التأمين",
+
+qrText:"امسح رمز QR لفتح الموقع الإلكتروني.",
+
+qrBackButton:"← العودة إلى الرئيسية",
+
+contactTitle:"📞 اتصل بنا",
+
+locationTitle:"أربيل",
+
+locationText:"المعهد التقني الإداري في أربيل مقابل كلية الهندسة",
+
+workingTime:"☀️ صباحاً: ٨:٣٠ إلى ١:٣٠<br>🌙 مساءً: ٣:٠٠ إلى ٧:٠٠",
+
+contactMaker:"Created by Eng. Iman S Qadir.",
+
+scheduleButton:"📅 الجدول الأسبوعي للقسم",
+
+graduatesButton:"🎓 الخريجون",
+
+newsButton:"📰 الأخبار والأنشطة",
+
+newsTitle:"📰 أخبار وأنشطة قسم التأمين",
+
+newsEmptyTitle:"الأخبار والأنشطة",
+
+newsEmptyText:"لا توجد حالياً أخبار أو أنشطة مسجلة. سيتم نشر الأنشطة والندوات وورش العمل والإعلانات الجديدة هنا.",
+
+newsBackButton:"← العودة إلى الرئيسية",
+
+graduatesTitle:"🎓 الخريجون",
+
+graduationYearTitle:"سنة التخرج",
+
+graduationYearText:"ليس بعد",
+
+graduateCountTitle:"عدد الخريجين",
+
+graduateCountText:"٠",
+
+graduatesNote:"لا يوجد لدينا خريجون حالياً لأن قسم التأمين قسم جديد. ستتم إضافة سنة التخرج وعدد الخريجين هنا عند تخرج أول دفعة من الطلبة.",
+
+graduatesBackButton:"← العودة إلى الرئيسية",
+
+scheduleTitle:"📅 الجدول الأسبوعي لقسم التأمين",
+
+morningScheduleButton:"☀️ جدول الفترة الصباحية",
+
+eveningScheduleButton:"🌙 جدول الفترة المسائية",
+
+aboutTitle:"عن قسم التأمين",
+
+introTitle:"التعريف بقسم التأمين",
+
+introText:"يُعد قسم التأمين من الأقسام المهمة في المعهد، ويهدف إلى إعداد كوادر مؤهلة ومتخصصة في مجال التأمين وتلبية احتياجات سوق العمل.",
+
+messageTitle:"رسالة القسم",
+
+messageText:"يهدف القسم إلى تزويد الخريجين بالمعارف والمفاهيم الأساسية في مجال التأمين وإعداد كوادر مؤهلة قادرة على استخدام الأساليب النظرية والكمية في هذا المجال.",
+
+visionTitle:"رؤية القسم",
+
+visionText:"أن يكون القسم رائداً في تأهيل الكفاءات المهنية في مجال التأمين وأن يحظى بالاعتراف على المستويين المحلي والدولي.",
+
+goalsTitle:"أهداف القسم",
+
+goalsText:"إعداد وتأهيل الطلبة للحصول على الدبلوم التقني في مجال التأمين.",
+
+goalText2:"تطوير مبادئ ومفاهيم التأمين وإدارة المخاطر.",
+
+goalText3:"إعداد خريجين مؤهلين قادرين على العمل في مؤسسات وشركات التأمين.",
+
+yearTitle:"سنة تأسيس القسم",
+
+yearText:"بناءً على الأمر الجامعي رقم (10591) الصادر عن رئاسة جامعة أربيل التقنية بتاريخ 30/10/2024، تمت الموافقة على استحداث قسم التأمين في المعهد التقني الإداري في أربيل للعام الدراسي (2025–2026). يحصل الطلبة على شهادة الدبلوم التقني في مجال التأمين. ويتم تحديد العناوين الوظيفية وفق القوانين والتعليمات المالية المعمول بها، وبعد سنة واحدة من الخدمة يصبح المسمى الوظيفي مساعد مشرف إداري.",
+
+semester1Title:"الفصل الدراسي الأول",
+
+semester2Title:"الفصل الدراسي الثاني",
+
+semester3Title:"الفصل الدراسي الثالث",
+
+semester4Title:"الفصل الدراسي الرابع",
+
+subjectsTitle:"مواد قسم التأمين",
+
+s1:"علم الكردولوجيا",
+s2:"مهارات اللغة الإنجليزية 1",
+s3:"أساسيات الحاسوب",
+s4:"مبادئ الإدارة",
+s5:"إدارة التأمين",
+
+s6:"مهارات اللغة الإنجليزية 2",
+s7:"نصوص التأمين",
+s8:"مبادئ المحاسبة",
+s9:"مبادئ الإحصاء",
+s10:"مبادئ التسويق",
+
+s11:"إدارة التأمين",
+s12:"قانون التأمين للعمليات",
+s13:"تسويق التأمين",
+s14:"محاسبة شركات التأمين",
+s15:"تأمين المسؤولية",
+
+s16:"برنامج Excel",
+s17:"التأمين الاجتماعي",
+s18:"التأمين على الحياة",
+s19:"تأمين الممتلكات الشخصية",
+s20:"إدارة شركات التأمين",
+
+back:"← العودة إلى الرئيسية"
+
+}
+
+};
+
+/* =====================================================
+   CHANGE LANGUAGE
+===================================================== */
+
+function changeLanguage(language){
+
+const t=translations[language];
+
+if(!t)return;
+
+document.documentElement.lang=language;
+
+document.documentElement.dir=
+language==="en" ? "ltr" : "rtl";
+
+document.getElementById("title").innerText=t.title;
+document.getElementById("description").innerText=t.description;
+document.getElementById("aboutButton").innerText=t.aboutButton;
+document.getElementById("staffButton").innerText=t.staffButton;
+document.getElementById("subjectsButton").innerText=t.subjectsButton;
+document.getElementById("scheduleButton").innerText=t.scheduleButton;
+document.getElementById("graduatesButton").innerText=t.graduatesButton;
+document.getElementById("newsButton").innerText=t.newsButton;
+document.getElementById("contactButton").innerText=t.contactButton;
+document.getElementById("qrButton").innerText=t.qrButton;
+
+/* Graduates */
+
+document.getElementById("graduatesTitle").innerText=t.graduatesTitle;
+document.getElementById("graduationYearTitle").innerText=t.graduationYearTitle;
+document.getElementById("graduationYearText").innerText=t.graduationYearText;
+document.getElementById("graduateCountTitle").innerText=t.graduateCountTitle;
+document.getElementById("graduateCountText").innerText=t.graduateCountText;
+document.getElementById("graduatesNote").innerText=t.graduatesNote;
+document.getElementById("graduatesBackButton").innerText=t.graduatesBackButton;
+
+/* News */
+
+document.getElementById("newsTitle").innerText=t.newsTitle;
+document.getElementById("newsEmptyTitle").innerText=t.newsEmptyTitle;
+document.getElementById("newsEmptyText").innerText=t.newsEmptyText;
+document.getElementById("newsBackButton").innerText=t.newsBackButton;
+
+/* QR */
+
+document.getElementById("qrTitle").innerText=t.qrTitle;
+document.getElementById("qrHeading").innerText=t.qrHeading;
+document.getElementById("qrText").innerText=t.qrText;
+document.getElementById("qrBackButton").innerText=t.qrBackButton;
+
+/* Contact */
+
+document.getElementById("contactTitle").innerText=t.contactTitle;
+document.getElementById("locationTitle").innerText=t.locationTitle;
+document.getElementById("locationText").innerText=t.locationText;
+document.getElementById("workingTime").innerHTML=t.workingTime;
+document.getElementById("contactMaker").innerText=t.contactMaker;
+
+/* Schedule */
+
+document.getElementById("scheduleTitle").innerText=t.scheduleTitle;
+document.getElementById("morningScheduleButton").innerText=t.morningScheduleButton;
+document.getElementById("eveningScheduleButton").innerText=t.eveningScheduleButton;
+
+/* About */
+
+document.getElementById("aboutTitle").innerText=t.aboutTitle;
+document.getElementById("introTitle").innerText=t.introTitle;
+document.getElementById("introText").innerText=t.introText;
+
+document.getElementById("messageTitle").innerText=t.messageTitle;
+document.getElementById("messageText").innerText=t.messageText;
+
+document.getElementById("visionTitle").innerText=t.visionTitle;
+document.getElementById("visionText").innerText=t.visionText;
+
+document.getElementById("goalsTitle").innerText=t.goalsTitle;
+document.getElementById("goalsText").innerText=t.goalsText;
+document.getElementById("goalText2").innerText=t.goalText2;
+document.getElementById("goalText3").innerText=t.goalText3;
+
+document.getElementById("yearTitle").innerText=t.yearTitle;
+document.getElementById("yearText").innerText=t.yearText;
+
+/* Subjects */
+
+document.getElementById("subjectsTitle").innerText=t.subjectsTitle;
+
+document.getElementById("semester1Title").innerText=t.semester1Title;
+document.getElementById("semester2Title").innerText=t.semester2Title;
+document.getElementById("semester3Title").innerText=t.semester3Title;
+document.getElementById("semester4Title").innerText=t.semester4Title;
+
+for(let i=1;i<=20;i++){
+
+document.getElementById("s"+i).innerText=t["s"+i];
+
+}
+
+/* Back Buttons */
+
+document.getElementById("aboutBackButton").innerText=t.back;
+document.getElementById("staffBackButton").innerText=t.back;
+document.getElementById("subjectsBackButton").innerText=t.back;
+document.getElementById("scheduleBackButton").innerText=t.back;
+
+}
+
+/* =====================================================
+   SEMESTER TOGGLE
+===================================================== */
+
+function toggleSemester(semesterId){
+
+const semester=document.getElementById(semesterId);
+
+semester.classList.toggle("open");
+
+}
+
+/* =====================================================
+   WEEKLY SCHEDULE TOGGLE
+===================================================== */
+
+function toggleSchedule(scheduleId){
+
+const schedule=document.getElementById(scheduleId);
+
+schedule.classList.toggle("open");
+
+}
+
+/* =====================================================
+   SHOW PAGE
+===================================================== */
+
+function showPage(pageId){
+
+document.getElementById("welcomePage").style.display="none";
+
+document.getElementById("aboutPage").style.display="none";
+
+document.getElementById("staffPage").style.display="none";
+
+document.getElementById("subjectsPage").style.display="none";
+
+document.getElementById("schedulePage").style.display="none";
+
+document.getElementById("qrPage").style.display="none";
+
+document.getElementById("contactPage").style.display="none";
+
+document.getElementById("graduatesPage").style.display="none";
+
+document.getElementById("newsPage").style.display="none";
+
+document.getElementById(pageId).style.display="block";
+
+window.scrollTo(0,0);
+
+}
+
+/* =====================================================
+   HOME
+===================================================== */
+
+function showHome(){
+
+document.getElementById("aboutPage").style.display="none";
+
+document.getElementById("staffPage").style.display="none";
+
+document.getElementById("subjectsPage").style.display="none";
+
+document.getElementById("schedulePage").style.display="none";
+
+document.getElementById("qrPage").style.display="none";
+
+document.getElementById("contactPage").style.display="none";
+
+document.getElementById("graduatesPage").style.display="none";
+
+document.getElementById("newsPage").style.display="none";
+
+document.getElementById("welcomePage").style.display="flex";
+
+window.scrollTo(0,0);
+
+}
+
+</script>
+
+<script>
+
+/* =====================================================
+   CREATE QR CODE
+===================================================== */
+
+function createQRCode(){
+
+const qrBox=document.getElementById("qrcode");
+
+if(!qrBox){
+return;
+}
+
+const pageUrl=window.location.href;
+
+const qrImage=document.createElement("img");
+
+qrImage.src=
+"https://api.qrserver.com/v1/create-qr-code/?size=220x220&data="+
+encodeURIComponent(pageUrl);
+
+qrImage.alt="QR Code";
+
+qrBox.innerHTML="";
+
+qrBox.appendChild(qrImage);
+
+}
+
+createQRCode();
+
+</script>
+
+</body>
+</html>
